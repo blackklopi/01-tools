@@ -14,9 +14,9 @@ _This is an assignment to the class [Advanced Programming](https://hsro-inf-fpk.
 		$ sudo apt-get install git
 		```
 	- Windows: Download and install the [Windows installation package](https://git-scm.com/download/win); make sure to install (and use) git bash.
-3. Try git in the real world - use Github:
-	- Sign in or create an account on [Github](https://github.com) (it's free, and you should already have one...).
-	- Create a new repository (note: with a free account, your're limited to public repos); select __Initialize this repository with a README__ to add a `README.md` file.
+3. Try git in the real world - use Git - in our case GitLab:
+	- Sign in on [GitLab TH Rosenheim](https://inf-git.fh-rosenheim.de) (you should have an account). As an alternative you you try to do the same on [Github](https://github.com/).
+	- Create a new repository (note for GitHub: with a free account, your're limited to public repos); select __Initialize this repository with a README__ to add a `README.md` file.
 	- On your computer, clone your new repository, edit the `README.md` to your choice, using the [Github markdown cheatsheet](https://guides.github.com/features/mastering-markdown/).
 	- Add/stage and commit the changes, and push them to your repository.
 	- Create and switch to a new branch (eg. `feature/add-license`), and add a file `LICENSE` to it, containing the MIT open source software license.  For a real project, you may want to chose a different license (read more about licenses here: [https://opensource.org/licenses](https://opensource.org/licenses)). But this is actually a different story.
@@ -46,7 +46,7 @@ _This is an assignment to the class [Advanced Programming](https://hsro-inf-fpk.
 	![Verify installed/configured JDKs](/assets/idea-02-jdk.png)
 	![Check default JDK for projects](/assets/idea-03-project-jdk.png)
 	You may also have to [configure the location of Gradle](https://www.jetbrains.com/help/idea/gradle.html), if not automatically configured.
-3. Select _Check out from Version Control: git_ and provide the repository URL; note that you can use either `https://hsro-inf-...` (and provide your Github username and password), or `git@github.com:hsro-inf-...` (with [SSH credentials as configured with Github](https://help.github.com/articles/connecting-to-github-with-ssh/)).
+3. Select _Check out from Version Control: git_ and provide the repository URL; note that you can use either `https://inf-git.fh-rosenheim.de...` (and provide your username and password), or `git@inf-git.fh-rosenheim.de:...` (with SSH credentials as configured with GitLab).
 	![Check out from VCS](/assets/idea-04-from-git.png)
 4. After checkout, it may take a while for Gradle to build and index the project.
 5. Look at the project's `build.gradle` and see how it configures for the use of [JUnit 5](http://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle).
@@ -56,9 +56,3 @@ _This is an assignment to the class [Advanced Programming](https://hsro-inf-fpk.
 
 > Note: We will go into details with `import static` and `@...` later, but go ahead and google what they do!
 
-
-## For the future expert
-
-The [original repository](https://hsro-inf-fpk.github.com/01a-tools) has [Tracis CI](https://travis-ci.org) integration enabled (see `.travis.yml`).
-On each push event, it will run a build process, which includes executing all tests.
-If one test fails, the build fails, which can help prevent merging in bugs from other branches or forks.
