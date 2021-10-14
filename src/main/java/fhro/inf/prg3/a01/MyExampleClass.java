@@ -9,4 +9,5 @@ public class MyExampleClass {
 		// TODO return correct multiplication result
 		return a * b ;
 	}
+
 }
